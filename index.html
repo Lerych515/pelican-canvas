@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pelican Canvas | Premium Yacht & Boat Upholstery | Miami, FL</title>
+<meta name="description" content="Custom yacht and boat interior upholstery in Miami. Premium marine vinyl & leather, carpets, enclosures, bimini tops. 100% handmade craftsmanship for luxury vessels.">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0A1628;
+  --gold: #C9A55A;
+  --cream: #F5F1E8;
+  --ocean: #1E3A5F;
+  --white: #FFFFFF;
+  --shadow: rgba(10, 22, 40, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--ocean) 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(201, 165, 90, 0.03) 2px,
+      rgba(201, 165, 90, 0.03) 4px
+    );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 900px;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.logo strong {
+  font-weight: 700;
+  display: block;
+  color: var(--gold);
+}
+
+.tagline {
+  font-size: clamp(14px, 2vw, 18px);
+  color: var(--cream);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.hero-cta {
+  display: inline-flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 16px 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn:hover {
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btn-primary::before {
+  background: transparent;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+  40% { transform: translate(-50%, -10px); }
+  60% { transform: translate(-50%, -5px); }
+}
+
+/* SECTION COMMON */
+section {
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--navy);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 30px auto 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: var(--ocean);
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
+}
+
+/* ABOUT */
+#about {
+  background: var(--cream);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.about-card {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about-icon {
+  font-size: 48px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.about-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--navy);
+}
+
+.about-card p {
+  color: var(--ocean);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.service-item {
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid #E5E5E5;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+
+.service-item:hover {
+  box-shadow: 0 10px 40px var(--shadow);
+  transform: translateY(-5px);
+}
+
+.service-item:hover::before {
+  width: 100%;
+}
+
+.service-item h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+
+.service-item p {
+  font-size: 14px;
+  color: var(--ocean);
+  line-height: 1.7;
+}
+
+/* GALLERY */
+#gallery {
+  background: var(--navy);
+  padding: 100px 20px;
+}
+
+#gallery .section-title {
+  color: var(--white);
+}
+
+#gallery .section-subtitle {
+  color: var(--cream);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  padding-top: 75%;
+  cursor: pointer;
+  background: var(--ocean);
+}
+
+.gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(10, 22, 40, 0.7));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* CONTACT */
+#contact {
+  background: var(--cream);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.contact-card {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--white);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  font-size: 40px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.contact-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--navy);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contact-card a {
+  display: inline-block;
+  color: var(--ocean);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contact-card a:hover {
+  color: var(--gold);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+  background: var(--navy);
+  color: var(--cream);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer p {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    min-height: 500px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div style="margin-bottom: 30px;">
+      <img src="logo.png" alt="Pelican Canvas Logo" style="width: 180px; height: 180px; margin: 0 auto; display: block; animation: fadeInUp 1s ease-out;">
+    </div>
+    <h1 class="logo" style="font-size: clamp(32px, 6vw, 56px); margin-bottom: 10px;">
+      <strong>PELICAN</strong>
+      CANVAS
+    </h1>
+    <p class="tagline">Premium Marine Upholstery · Miami</p>
+    <div class="hero-cta">
+      <a href="https://wa.me/13213109375" class="btn btn-primary" target="_blank">💬 Text for Quote</a>
+      <a href="#gallery" class="btn">View Portfolio</a>
+    </div>
+  </div>
+  <div class="scroll-indicator">Scroll ↓</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">Crafted for the Sea</h2>
+    <p class="section-subtitle">
+      With 8 years of dedicated craftsmanship, we specialize in custom yacht and boat interiors. Based in Dania Beach, proudly serving yacht owners from West Palm Beach to Miami and throughout South Florida. Every stitch, every detail—100% handmade.
+    </p>
+    
+    <div style="max-width: 600px; margin: 0 auto 60px; text-align: center;">
+      <img src="team.jpeg" alt="Pelican Canvas Team - Father and Son" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+      <p style="margin-top: 20px; font-size: 15px; color: var(--ocean); font-style: italic;">Family-owned craftsmanship since 2018</p>
+    </div>
+    
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">⚓</div>
+        <h3>8 Years Experience</h3>
+        <p>Trusted by yacht owners across South Florida for premium custom upholstery and marine fabrication.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">✋</div>
+        <h3>100% Handmade</h3>
+        <p>Every project is crafted with meticulous attention to detail using premium marine-grade materials.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🏆</div>
+        <h3>Luxury Quality</h3>
+        <p>Premium vinyl, leather, and custom fabrics for vessels valued from $150K to multi-million dollar yachts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">
+      From complete interior refits to custom seating and canvas work—we bring your vision to life on the water.
+    </p>
+    <div class="services-grid">
+      <div class="service-item">
+        <h3>Custom Yacht & Boat Seating</h3>
+        <p>Bespoke upholstery designed to match your vessel's unique style and comfort requirements.</p>
+      </div>
+      <div class="service-item">
+        <h3>Premium Marine Vinyl & Leather</h3>
+        <p>Highest quality UV-resistant materials built to withstand the marine environment.</p>
+      </div>
+      <div class="service-item">
+        <h3>Marine Carpets</h3>
+        <p>Custom-fit marine carpeting for cockpits, salons, and decks in a variety of premium materials.</p>
+      </div>
+      <div class="service-item">
+        <h3>Enclosures & Shades</h3>
+        <p>Weather protection solutions including eisenglass enclosures and sunshade systems.</p>
+      </div>
+      <div class="service-item">
+        <h3>Bimini Tops</h3>
+        <p>Custom-designed bimini tops providing style and sun protection for your vessel.</p>
+      </div>
+      <div class="service-item">
+        <h3>Classic Cars & Jets</h3>
+        <p>Luxury upholstery services for classic automobiles and business jet interiors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <h2 class="section-title">Our Work</h2>
+    <p class="section-subtitle">
+      A selection of our recent projects showcasing premium craftsmanship and attention to detail.
+    </p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="IMG_1651.jpeg" alt="Yacht upholstery - Everglades boat seating">
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_1650.jpeg" alt="Custom marine vinyl seating with diamond stitching">
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_1645.jpeg" alt="Luxury yacht interior upholstery">
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_1644.jpeg" alt="Custom boat interior with premium leather">
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_1643.jpeg" alt="Yacht enclosure and canvas work">
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_1642.jpeg" alt="Boat cover and canvas fabrication">
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_1641.jpeg" alt="Custom marine seating upholstery">
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_1637.jpeg" alt="Center console boat seating">
+      </div>
+      <div class="gallery-item">
+        <img src="IMG_1475.jpeg" alt="Boat bimini top and canvas">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">
+      Text only, please. Send photos of your vessel for a fast, accurate quote.
+    </p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <h3>WhatsApp (Primary)</h3>
+        <a href="https://wa.me/13213109375" target="_blank">Text Us Now</a>
+        <p style="margin-top: 12px; font-size: 13px; color: var(--ocean);">Send photos for quick estimate</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📸</div>
+        <h3>Instagram</h3>
+        <a href="https://instagram.com/pelican.canvas" target="_blank">@pelican.canvas</a>
+        <p style="margin-top: 12px; font-size: 13px; color: var(--ocean);">View our latest projects</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <h3>Email (For Businesses)</h3>
+        <a href="mailto:contact@pelican-canvas.com">contact@pelican-canvas.com</a>
+        <p style="margin-top: 12px; font-size: 13px; color: var(--ocean);">Marinas & yacht dealers</p>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 40px; font-size: 14px; color: var(--ocean);">
+      For urgent inquiries: <a href="tel:3213109375" style="color: var(--gold); text-decoration: none; font-weight: 600;">(321) 310-9375</a> (Text preferred)
+    </p>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/13213109375" class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp">
+  💬
+</a>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2026 Pelican Canvas · Dania Beach, Florida</p>
+    <p style="margin-top: 8px; font-size: 13px; opacity: 0.8;">Serving West Palm Beach to Miami & Throughout South Florida</p>
+  </div>
+</footer>
+
+</body>
+</html>
