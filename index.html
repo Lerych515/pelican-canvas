@@ -4,10 +4,25 @@
     <meta name="google-site-verification" content="693uBzQvHuEpB6675c7tPGLNIv57VUcxUzIEoN95DzY" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelican Canvas | Premium Marine Upholstery | Miami • Fort Lauderdale • West Palm Beach</title>
-    <meta name="description" content="Premium custom marine upholstery in South Florida. Luxury yacht interiors, boat cushions, canvas & enclosures. Family craftsmanship since 2018. Dania Beach serving Miami to West Palm.">
-    <meta name="keywords" content="marine upholstery Miami, yacht upholstery Fort Lauderdale, boat cushions South Florida, custom marine canvas, luxury yacht interior, boat upholstery Dania Beach">
-    
+    <title>Pelican Canvas | Marine Upholstery & Custom Boat Canvas | Miami • Fort Lauderdale • West Palm Beach</title>
+    <meta name="description" content="Pelican Canvas delivers premium marine upholstery, custom boat cushions, yacht interiors, bimini tops, enclosures and covers in South Florida. Serving Miami, Fort Lauderdale, Dania Beach and West Palm Beach." />
+    <meta name="keywords" content="marine upholstery Miami, boat upholstery Fort Lauderdale, yacht interior South Florida, custom boat canvas, boat cushions Miami, bimini tops Fort Lauderdale, boat covers Dania Beach, marine canvas West Palm Beach" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Pelican Canvas" />
+    <meta name="theme-color" content="#0A1628" />
+    <link rel="canonical" href="https://pelican-canvas.com/" />
+    <link rel="icon" type="image/png" href="IMG_9007.png" />
+    <meta property="og:title" content="Pelican Canvas | Marine Upholstery & Custom Boat Canvas" />
+    <meta property="og:description" content="Premium boat upholstery, yacht interiors, canvas, covers and enclosures in South Florida. Text photos on WhatsApp for a fast quote." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pelican-canvas.com/" />
+    <meta property="og:image" content="https://pelican-canvas.com/IMG_1651.jpeg" />
+    <meta property="og:site_name" content="Pelican Canvas" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pelican Canvas | Marine Upholstery & Custom Boat Canvas" />
+    <meta name="twitter:description" content="Premium marine upholstery and custom canvas in South Florida." />
+    <meta name="twitter:image" content="https://pelican-canvas.com/IMG_1651.jpeg" />
+
     <style>
         * {
             margin: 0;
@@ -17,18 +32,34 @@
 
         :root {
             --navy: #0A1628;
+            --navy-2: #13233B;
             --gold: #D4AF37;
-            --cream: #F5F5DC;
+            --cream: #F6F2E8;
             --white: #FFFFFF;
-            --light-gray: #E8E8E8;
-            --dark-blue: #1a2942;
+            --light-gray: #EEF1F4;
+            --muted: #5C6675;
+            --shadow: 0 12px 30px rgba(10, 22, 40, 0.12);
+            --radius: 14px;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: Georgia, serif;
             color: var(--navy);
             line-height: 1.6;
             background: var(--white);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
         }
 
         .container {
@@ -37,699 +68,1177 @@
             padding: 0 20px;
         }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
-            color: var(--cream);
-            padding: 60px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+        .section {
+            padding: 84px 0;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,60 Q300,20 600,60 T1200,60 L1200,120 L0,120 Z" fill="rgba(212,175,55,0.1)"/></svg>') bottom repeat-x;
-            opacity: 0.3;
+        .section-light {
+            background: var(--light-gray);
         }
 
-        header .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .logo {
-            font-size: 3em;
-            font-weight: bold;
-            margin-bottom: 10px;
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 14px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
             color: var(--gold);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            letter-spacing: 2px;
+            font-weight: 700;
         }
 
-        .tagline {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            color: var(--cream);
-            font-style: italic;
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.9rem);
+            line-height: 1.15;
+            margin-bottom: 16px;
+            text-align: center;
         }
 
-        .cta-buttons {
+        .section-intro {
+            max-width: 760px;
+            margin: 0 auto 46px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 1.08rem;
+        }
+
+        .btn-row {
             display: flex;
-            gap: 20px;
+            gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 35px;
+            padding: 16px 28px;
+            border-radius: 999px;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-            border: 2px solid;
-            font-weight: bold;
+            font-weight: 700;
+            border: 2px solid transparent;
+            transition: 0.25s ease;
+            font-size: 1rem;
         }
 
         .btn-primary {
             background: var(--gold);
             color: var(--navy);
-            border-color: var(--gold);
+            box-shadow: 0 12px 24px rgba(212, 175, 55, 0.25);
         }
 
         .btn-primary:hover {
-            background: transparent;
-            color: var(--gold);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(212,175,55,0.4);
+            box-shadow: 0 16px 30px rgba(212, 175, 55, 0.35);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: var(--cream);
-            border-color: var(--cream);
+            border-color: rgba(255,255,255,0.5);
+            color: var(--white);
+            background: rgba(255,255,255,0.06);
         }
 
         .btn-secondary:hover {
-            background: var(--cream);
-            color: var(--navy);
+            background: rgba(255,255,255,0.14);
             transform: translateY(-2px);
         }
 
-        /* Sections */
-        section {
-            padding: 80px 20px;
-        }
-
-        section:nth-child(even) {
-            background: var(--light-gray);
-        }
-
-        h2 {
-            font-size: 2.5em;
+        .btn-outline-dark {
+            border-color: rgba(10,22,40,0.16);
             color: var(--navy);
-            margin-bottom: 20px;
-            text-align: center;
+            background: transparent;
+        }
+
+        .btn-outline-dark:hover {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        header {
             position: relative;
-            padding-bottom: 15px;
+            color: var(--cream);
+            background:
+                linear-gradient(rgba(10,22,40,0.78), rgba(10,22,40,0.78)),
+                url('IMG_1647.jpeg') center/cover no-repeat;
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
         }
 
-        h2::after {
-            content: '';
+        header::after {
+            content: "";
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--gold);
+            inset: auto 0 0 0;
+            height: 120px;
+            background: linear-gradient(to top, rgba(10,22,40,0.55), transparent);
         }
 
-        /* About Section */
-        .about-content {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: center;
-            font-size: 1.1em;
-            line-height: 1.8;
+        .hero {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 52px 0 70px;
         }
 
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+        .hero-top {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
         }
 
-        .highlight-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
+        .logo-mark {
+            width: 76px;
+            height: 76px;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
         }
 
-        .highlight-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        .brand {
+            display: flex;
+            flex-direction: column;
         }
 
-        .highlight-icon {
-            font-size: 2.5em;
+        .brand-name {
             color: var(--gold);
-            margin-bottom: 15px;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1;
+            letter-spacing: 0.05em;
+            font-weight: 700;
         }
 
-        .highlight-card h3 {
-            color: var(--navy);
-            margin-bottom: 10px;
-            font-size: 1.3em;
+        .brand-sub {
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.88rem;
+            opacity: 0.86;
         }
 
-        /* Services Section */
-        .services-grid {
+        .hero-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 36px;
+            align-items: end;
+        }
+
+        .hero-copy {
+            max-width: 760px;
+        }
+
+        .hero-copy .eyebrow {
+            color: var(--gold);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 7vw, 5.4rem);
+            line-height: 0.98;
+            margin-bottom: 18px;
+            letter-spacing: -0.03em;
+            color: var(--white);
+        }
+
+        .hero-text {
+            font-size: clamp(1.08rem, 2vw, 1.3rem);
+            max-width: 740px;
+            color: rgba(246,242,232,0.95);
+            margin-bottom: 20px;
+        }
+
+        .hero-pricing {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 24px 0 28px;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.18);
+            color: var(--white);
+            backdrop-filter: blur(8px);
+            font-size: 0.98rem;
+        }
+
+        .hero-note {
+            margin-top: 16px;
+            color: rgba(246,242,232,0.82);
+            font-size: 0.95rem;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: var(--radius);
+            padding: 24px;
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card h3 {
+            margin-bottom: 14px;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+
+        .hero-card ul {
+            list-style: none;
+        }
+
+        .hero-card li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: rgba(246,242,232,0.95);
+        }
+
+        .hero-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .trust-strip {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .trust-item {
+            text-align: center;
+            font-size: 0.98rem;
+            padding: 8px 10px;
+        }
+
+        .trust-item strong {
+            display: block;
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 3px;
+        }
+
+        .pain-grid,
+        .proof-grid,
+        .services-grid,
+        .process-grid,
+        .faq-grid,
+        .gallery,
+        .coverage-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .pain-grid {
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 44px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+        }
+
+        .pain-card {
+            border-top: 4px solid var(--gold);
+            text-align: center;
+        }
+
+        .pain-card .icon {
+            font-size: 2rem;
+            margin-bottom: 14px;
+        }
+
+        .pain-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.28rem;
+        }
+
+        .pain-card p {
+            color: var(--muted);
+        }
+
+        .proof-grid {
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 44px;
+        }
+
+        .proof-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .proof-card p, .proof-card li {
+            color: var(--muted);
+        }
+
+        .proof-card ul {
+            padding-left: 18px;
+            margin-top: 12px;
+        }
+
+        .services-grid {
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 46px;
         }
 
         .service-card {
             background: var(--white);
-            padding: 35px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
             border-top: 4px solid var(--gold);
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            padding: 32px;
         }
 
         .service-card h3 {
-            color: var(--navy);
-            margin-bottom: 15px;
-            font-size: 1.4em;
+            margin-bottom: 14px;
+            font-size: 1.35rem;
         }
 
         .service-card ul {
             list-style: none;
-            padding-left: 0;
         }
 
         .service-card li {
-            padding: 8px 0;
-            padding-left: 25px;
             position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--muted);
         }
 
         .service-card li::before {
-            content: '✓';
+            content: "•";
             position: absolute;
-            left: 0;
+            left: 8px;
             color: var(--gold);
-            font-weight: bold;
+            font-weight: 700;
         }
 
-        /* How to Get Started Section */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
+        .materials-box {
+            margin-top: 34px;
+            background: linear-gradient(135deg, #0f1d31, #162844);
+            color: var(--cream);
+            border-radius: var(--radius);
+            padding: 28px;
         }
 
-        .process-step {
+        .materials-box h3 {
+            margin-bottom: 12px;
+            color: var(--white);
+        }
+
+        .materials-pills {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .materials-pills span {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.14);
+            padding: 10px 14px;
+            border-radius: 999px;
+        }
+
+        .process-grid {
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 46px;
+        }
+
+        .step {
             text-align: center;
-            padding: 30px;
             background: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            padding: 28px 22px;
         }
 
         .step-number {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
             background: var(--gold);
             color: var(--navy);
-            border-radius: 50%;
-            font-size: 1.8em;
-            font-weight: bold;
-            margin-bottom: 20px;
+            font-size: 1.35rem;
+            font-weight: 700;
         }
 
-        .process-step h3 {
-            color: var(--navy);
-            margin-bottom: 15px;
-            font-size: 1.3em;
+        .step h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
         }
 
-        /* Turnaround Section */
-        .turnaround-info {
-            max-width: 700px;
-            margin: 40px auto;
-            background: var(--white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        .step p {
+            color: var(--muted);
         }
 
-        .turnaround-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .turnaround-item:last-child {
-            border-bottom: none;
-        }
-
-        .turnaround-type {
-            font-weight: bold;
-            color: var(--navy);
-            font-size: 1.1em;
-        }
-
-        .turnaround-time {
-            color: var(--gold);
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-
-        /* Testimonials Section */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 4px solid var(--gold);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: var(--navy);
-            margin-bottom: 20px;
-            line-height: 1.8;
-            font-size: 1.05em;
-        }
-
-        .testimonial-author {
-            color: var(--gold);
-            font-weight: bold;
-        }
-
-        /* Portfolio Gallery */
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 50px;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 46px;
         }
 
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            aspect-ratio: 4/3;
-            background: var(--light-gray);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            min-height: 300px;
+            background: #ddd;
         }
 
-        .gallery-placeholder {
+        .gallery-item img {
             width: 100%;
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
-            color: var(--cream);
-            font-size: 1.1em;
-            text-align: center;
-            padding: 20px;
+            object-fit: cover;
+            transition: transform 0.35s ease;
         }
 
-        /* Contact Section */
-        .contact-content {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: center;
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
 
-        .contact-info {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-top: 30px;
+        .gallery-caption {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 18px;
+            background: linear-gradient(to top, rgba(10,22,40,0.9), transparent);
+            color: var(--white);
         }
 
-        .contact-item {
-            margin: 25px 0;
-            font-size: 1.1em;
-        }
-
-        .contact-item strong {
-            color: var(--navy);
+        .gallery-caption strong {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
+            font-size: 1.05rem;
         }
 
-        .contact-item a {
+        .gallery-caption span {
+            font-size: 0.93rem;
+            color: rgba(255,255,255,0.84);
+        }
+
+        .coverage-grid {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            margin-top: 34px;
+        }
+
+        .coverage-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .coverage-list span {
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: var(--light-gray);
+            border: 1px solid rgba(10,22,40,0.08);
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, var(--navy), var(--navy-2));
+            color: var(--cream);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+        }
+
+        .quote-box h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .quote-box p {
+            margin-bottom: 10px;
+            color: rgba(246,242,232,0.9);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 46px;
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--gold);
+        }
+
+        .testimonial p {
+            color: var(--muted);
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .testimonial strong {
+            color: var(--navy);
+        }
+
+        .faq-grid {
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 44px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px;
+        }
+
+        .faq-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.16rem;
+        }
+
+        .faq-item p {
+            color: var(--muted);
+        }
+
+        .contact-wrap {
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-highlight {
+            background: linear-gradient(135deg, var(--navy), var(--navy-2));
+            color: var(--cream);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 34px;
+            margin-top: 34px;
+        }
+
+        .contact-highlight h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+        }
+
+        .contact-highlight p {
+            max-width: 680px;
+            margin: 0 auto 20px;
+            color: rgba(246,242,232,0.9);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 26px;
+            text-align: left;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .contact-card strong {
+            display: block;
             color: var(--gold);
-            text-decoration: none;
-            font-weight: bold;
+            margin-bottom: 6px;
         }
 
-        .contact-item a:hover {
+        .contact-card a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
             text-decoration: underline;
         }
 
-        .whatsapp-highlight {
-            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
-            color: var(--cream);
-            padding: 25px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-
-        .whatsapp-highlight strong {
-            color: var(--gold);
-        }
-
-        /* Footer */
         footer {
             background: var(--navy);
             color: var(--cream);
+            padding: 32px 0 42px;
+        }
+
+        .footer-inner {
             text-align: center;
-            padding: 40px 20px;
         }
 
-        footer p {
-            margin: 10px 0;
+        .footer-inner p + p {
+            margin-top: 6px;
         }
 
-        .service-area {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(212,175,55,0.3);
-            color: var(--gold);
+        .footer-note {
+            margin-top: 18px;
+            color: rgba(246,242,232,0.78);
+            font-size: 0.95rem;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 2em;
+        @media (max-width: 1024px) {
+            .hero-grid,
+            .pain-grid,
+            .proof-grid,
+            .services-grid,
+            .gallery,
+            .testimonials-grid,
+            .faq-grid,
+            .coverage-grid,
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
-            .tagline {
-                font-size: 1.1em;
+            .process-grid,
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 720px) {
+            .section {
+                padding: 68px 0;
             }
 
-            h2 {
-                font-size: 2em;
+            header {
+                min-height: auto;
             }
 
-            .cta-buttons {
-                flex-direction: column;
+            .hero {
+                padding: 36px 0 54px;
+            }
+
+            .hero-top {
+                justify-content: center;
+                text-align: left;
+            }
+
+            .hero-grid,
+            .pain-grid,
+            .proof-grid,
+            .services-grid,
+            .process-grid,
+            .gallery,
+            .coverage-grid,
+            .testimonials-grid,
+            .faq-grid,
+            .contact-grid,
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 2.7rem;
             }
 
             .btn {
                 width: 100%;
+                text-align: center;
             }
 
-            .turnaround-item {
+            .btn-row {
                 flex-direction: column;
+            }
+
+            .contact-card {
                 text-align: center;
-                gap: 10px;
             }
         }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"LocalBusiness",
+      "name":"Pelican Canvas",
+      "url":"https://pelican-canvas.com/",
+      "image":"https://pelican-canvas.com/IMG_1651.jpeg",
+      "logo":"https://pelican-canvas.com/IMG_9007.png",
+      "description":"Premium marine upholstery, yacht interiors, boat cushions, canvas, bimini tops, enclosures and covers in South Florida.",
+      "telephone":"+1-321-310-9375",
+      "email":"contact@pelicancanvas.com",
+      "areaServed":["Miami","Fort Lauderdale","Dania Beach","Hollywood","Aventura","Sunny Isles Beach","Pompano Beach","Boca Raton","West Palm Beach"],
+      "address":{
+        "@type":"PostalAddress",
+        "addressLocality":"Dania Beach",
+        "addressRegion":"FL",
+        "addressCountry":"US"
+      },
+      "sameAs":[
+        "https://pelican-canvas.com/"
+      ],
+      "priceRange":"$$$",
+      "serviceType":[
+        "Marine Upholstery",
+        "Boat Canvas",
+        "Yacht Interiors",
+        "Boat Cushions",
+        "Bimini Tops",
+        "Boat Covers",
+        "Enclosures"
+      ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 10px;">
-                <img src="IMG_9007.png" alt="Pelican Canvas Logo" style="height: 80px; width: auto;">
-                <h1 class="logo" style="margin: 0;">PELICAN CANVAS</h1>
+    <header id="top">
+        <div class="container hero">
+            <div class="hero-top">
+                <img src="IMG_9007.png" alt="Pelican Canvas logo" class="logo-mark" />
+                <div class="brand">
+                    <div class="brand-name">PELICAN CANVAS</div>
+                    <div class="brand-sub">Miami • Fort Lauderdale • West Palm Beach</div>
+                </div>
             </div>
-            <p class="tagline">Premium Marine Upholstery · South Florida</p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/13213109375?text=Hi%20Pelican%20Canvas!%20I'd%20like%20a%20quote.%0ABoat%20model:%20____%0ALocation:%20____%0AI%20can%20send%20photos." class="btn btn-primary" target="_blank">Text Us on WhatsApp</a>
-                <a href="#portfolio" class="btn btn-secondary">View Our Work</a>
+
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Custom yacht & boat interiors in South Florida</span>
+                    <h1 class="hero-title">Perfect lines — or we redo it.</h1>
+                    <p class="hero-text">
+                        Premium marine upholstery, canvas and full refits built for Florida sun, salt and real use.
+                        We help boat owners upgrade comfort, clean up worn interiors and protect their investment with a factory-level finish.
+                    </p>
+
+                    <div class="hero-pricing">
+                        <span class="hero-pill">Projects typically start from $700+</span>
+                        <span class="hero-pill">Full interiors: $5,000–$15,000+</span>
+                    </div>
+
+                    <div class="btn-row">
+                        <a href="https://wa.me/13213109375?text=Hi%20Pelican%20Canvas!%20I%27d%20like%20a%20quote.%0ABoat%20model:%20____%0ALocation:%20____%0AWork%20needed:%20____%0AI%20can%20send%20photos." class="btn btn-primary" target="_blank" rel="noopener">Get a Quote on WhatsApp</a>
+                        <a href="#portfolio" class="btn btn-secondary">View Our Work</a>
+                    </div>
+
+                    <p class="hero-note">Text only • Photos welcome • Fastest way to get a quote</p>
+                </div>
+
+                <aside class="hero-card">
+                    <h3>Why owners choose Pelican Canvas</h3>
+                    <ul>
+                        <li>Clean stitching and tight fit — not sloppy, loose or rushed work</li>
+                        <li>Materials selected for South Florida heat, UV and salt exposure</li>
+                        <li>Custom work for center consoles, cruisers and yachts</li>
+                        <li>Direct communication by text with photos and real project details</li>
+                    </ul>
+                </aside>
             </div>
-            <p style="margin-top: 20px; font-size: 1em; color: var(--cream); opacity: 0.9;">
-                Text only • Photos welcome
-            </p>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>Premium Craftsmanship for South Florida Boats & Yachts</h2>
-            <div class="about-content">
-                <p>At Pelican Canvas, we specialize in luxury marine upholstery for discerning boat owners throughout South Florida. From premium center consoles to luxury yachts, we deliver exceptional craftsmanship that enhances both comfort and style on the water.</p>
-                <p>Family-owned craftsmanship since 2018, serving Miami, Fort Lauderdale, and West Palm Beach with dedicated attention to every detail.</p>
-                
-                <div style="margin: 40px auto; max-width: 400px;">
-                    <img src="4AB1D54D-5116-469E-A584-2037A86A0401.jpeg" alt="Pelican Canvas Team" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                    <p style="text-align: center; margin-top: 15px; font-size: 0.95em; color: var(--gold); font-style: italic;">Family craftsmanship you can trust</p>
-                </div>
-            </div>
-
-            <div class="highlights">
-                <div class="highlight-card">
-                    <div class="highlight-icon">⚓</div>
-                    <h3>Premium Materials</h3>
-                    <p>Marine-grade fabrics and materials designed to withstand the harsh South Florida marine environment</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🎨</div>
-                    <h3>Custom Design</h3>
-                    <p>Tailored solutions that match your vessel's aesthetics and your personal style preferences</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">✨</div>
-                    <h3>Expert Installation</h3>
-                    <p>Professional installation ensuring perfect fit and long-lasting durability for years of enjoyment</p>
-                </div>
-            </div>
+    <div class="trust-strip">
+        <div class="container trust-grid">
+            <div class="trust-item"><strong>Since 2018</strong>Family craftsmanship</div>
+            <div class="trust-item"><strong>South Florida</strong>Miami to West Palm</div>
+            <div class="trust-item"><strong>Premium Only</strong>Materials built for marine use</div>
+            <div class="trust-item"><strong>Text to Quote</strong>Fastest way to start</div>
         </div>
-    </section>
+    </div>
 
-    <!-- Services Section -->
-    <section id="services">
+    <section class="section" id="problems">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Interior Upholstery</h3>
-                    <ul>
-                        <li>Custom seating and lounges</li>
-                        <li>Salon and cabin cushions</li>
-                        <li>Helm seats and captain chairs</li>
-                        <li>Sunpad and deck cushions</li>
-                        <li>Headliners and panels</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Canvas & Enclosures</h3>
-                    <ul>
-                        <li>Bimini tops and extensions</li>
-                        <li>Full enclosures and isinglass</li>
-                        <li>Dodgers and spray shields</li>
-                        <li>Covers and protective canvas</li>
-                        <li>Weather curtains</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Restoration & Repair</h3>
-                    <ul>
-                        <li>Complete interior refits</li>
-                        <li>Cushion re-upholstery</li>
-                        <li>Canvas repairs and patches</li>
-                        <li>Zipper and hardware replacement</li>
-                        <li>Color matching and updates</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How to Get Started Section -->
-    <section id="process">
-        <div class="container">
-            <h2>How to Get Started</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Send Photos</h3>
-                    <p>Text us clear photos of your boat's upholstery or canvas work needed via WhatsApp</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Share Details</h3>
-                    <p>Tell us your boat model, location, and what you'd like to accomplish</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Get Your Quote</h3>
-                    <p>We'll provide a detailed estimate and timeline for your custom project</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Turnaround Times Section -->
-    <section id="turnaround">
-        <div class="container">
-            <h2>Turnaround Time</h2>
-            <div class="turnaround-info">
-                <div class="turnaround-item">
-                    <span class="turnaround-type">Small Projects</span>
-                    <span class="turnaround-time">3-5 Days</span>
-                </div>
-                <div class="turnaround-item">
-                    <span class="turnaround-type">Medium Upholstery</span>
-                    <span class="turnaround-time">1-2 Weeks</span>
-                </div>
-                <div class="turnaround-item">
-                    <span class="turnaround-type">Full Interior Refit</span>
-                    <span class="turnaround-time">By Appointment</span>
-                </div>
-            </div>
-            <div class="about-content" style="margin-top: 30px;">
-                <p>Timeline begins after materials are confirmed and may vary based on material availability and project complexity. We'll provide accurate estimates during consultation.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Exceptional craftsmanship on our 48' yacht interior. The attention to detail and quality of materials exceeded our expectations."</p>
-                    <p class="testimonial-author">— Azimut Owner, Fort Lauderdale</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Perfect fit and finish on our custom bimini and enclosure. Pelican Canvas delivered exactly what we needed for South Florida conditions."</p>
-                    <p class="testimonial-author">— Center Console Owner, Miami Beach</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Professional service from start to finish. Our boat's interior looks brand new and the quality is outstanding."</p>
-                    <p class="testimonial-author">— Sea Ray Owner, Dania Beach, 2025</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <div class="container">
-            <h2>Our Portfolio</h2>
-            <p style="text-align: center; max-width: 700px; margin: 20px auto; font-size: 1.1em;">
-                From intimate center consoles to expansive yacht interiors, each project showcases our commitment to premium craftsmanship and attention to detail.
-            </p>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="IMG_1651.jpeg" alt="Premium Center Console with Custom Helm Seating" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_1650.jpeg" alt="Luxury Everglades Helm Seats with Diamond Stitch" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_1647.jpeg" alt="Complete Cockpit Interior Refit with Bimini Top" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_1645.jpeg" alt="Custom Captain's Chair with Diamond Pattern" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_1644.jpeg" alt="Yacht Interior Salon Seating" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_1643.jpeg" alt="Custom Canvas Enclosure Installation" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_1642.jpeg" alt="Performance Boat Full Canvas Cover" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_1641.jpeg" alt="Center Console Custom Seating" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_1637.jpeg" alt="T-Top with Canvas Shade" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_1475.jpeg" alt="Full Boat Cover - Professional Canvas Work" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_1474.jpeg" alt="Custom T-Top Cover - Marine Canvas" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="gallery-item">
-                    <img src="IMG_8608.jpeg" alt="Premium Boat Cover at Marina" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <p style="font-size: 1.1em; color: var(--navy);">
-                    <em>Contact us to see our complete portfolio and discuss your specific project needs.</em>
+            <div class="section-intro">
+                <span class="eyebrow">What we fix</span>
+                <h2>Your boat should not look cheap.</h2>
+                <p>
+                    Crooked stitching, worn cushions, faded canvas and poor fit stand out immediately on the water.
+                    We fix those details properly so your boat looks cleaner, feels better and holds value.
                 </p>
             </div>
+
+            <div class="pain-grid">
+                <div class="card pain-card">
+                    <div class="icon">✂️</div>
+                    <h3>Bad Stitching</h3>
+                    <p>Uneven lines and careless finish make even expensive boats look neglected.</p>
+                </div>
+                <div class="card pain-card">
+                    <div class="icon">☀️</div>
+                    <h3>Florida Heat & UV</h3>
+                    <p>Cheap materials crack, fade and overheat fast in South Florida conditions.</p>
+                </div>
+                <div class="card pain-card">
+                    <div class="icon">⚓</div>
+                    <h3>Worn or Tired Interiors</h3>
+                    <p>Seats, cushions and canvas should feel premium again — not like an afterthought.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <section class="section section-light" id="about">
         <div class="container">
-            <h2>Get in Touch</h2>
-            <div class="contact-content">
-                <div class="whatsapp-highlight">
-                    <p style="font-size: 1.2em; margin-bottom: 15px;">
-                        <strong>We communicate via text only</strong>
+            <div class="section-intro">
+                <span class="eyebrow">About Pelican Canvas</span>
+                <h2>Premium craftsmanship for boats and yachts in South Florida</h2>
+                <p>
+                    Pelican Canvas specializes in marine upholstery, custom boat canvas and interior refits for owners who care about quality,
+                    clean lines and durability. From center consoles to larger yachts, every project is built with close attention to fit, finish and long-term use.
+                </p>
+            </div>
+
+            <div class="coverage-grid">
+                <div class="card">
+                    <h3 style="margin-bottom: 12px; font-size: 1.5rem;">Built for owners who notice details</h3>
+                    <p style="color: var(--muted); margin-bottom: 14px;">
+                        We are family-owned and focused on premium results. That means thoughtful design, marine-grade materials and work that looks right up close, not only from far away.
                     </p>
-                    <p>Custom marine upholstery requires photos and detailed discussion. WhatsApp is the fastest way to get your quote started.</p>
+                    <p style="color: var(--muted);">
+                        Whether you need a seat re-trim, custom cover, bimini, enclosure or a full interior refresh, we keep the process straightforward: send photos, share your boat model and location, and get a clear next step.
+                    </p>
                 </div>
 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <strong>WhatsApp (Preferred)</strong>
-                        <a href="https://wa.me/13213109375" target="_blank">(321) 310-9375</a>
-                    </div>
+                <div class="card">
+                    <img src="4AB1D54D-5116-469E-A584-2037A86A0401.jpeg" alt="Pelican Canvas family team" style="border-radius: 12px; margin-bottom: 14px; object-fit: cover; max-height: 420px; width: 100%;">
+                    <p style="text-align:center; color: var(--muted);">Family craftsmanship you can trust.</p>
+                </div>
+            </div>
 
-                    <div class="contact-item">
+            <div class="proof-grid">
+                <div class="card proof-card">
+                    <h3>Factory-level finish</h3>
+                    <p>We focus on clean seams, better fit, balanced proportions and a premium final look.</p>
+                </div>
+                <div class="card proof-card">
+                    <h3>Made for marine life</h3>
+                    <p>Projects are designed around UV, salt, moisture and day-to-day real use in South Florida.</p>
+                </div>
+                <div class="card proof-card">
+                    <h3>Custom, not generic</h3>
+                    <p>Your boat is not treated like a template. We tailor the work to the vessel and the owner.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-intro">
+                <span class="eyebrow">Services</span>
+                <h2>Marine upholstery, boat canvas and custom interior work</h2>
+                <p>
+                    We handle premium upholstery and canvas projects across South Florida for center consoles, cruisers and yachts.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Marine Upholstery</h3>
+                    <ul>
+                        <li>Helm seats and captain chairs</li>
+                        <li>Leaning post and cockpit seating</li>
+                        <li>Sun pads and deck cushions</li>
+                        <li>Cabin and salon cushions</li>
+                        <li>Seat re-trim and restoration</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Canvas & Covers</h3>
+                    <ul>
+                        <li>Bimini tops and T-top canvas</li>
+                        <li>Boat covers and console covers</li>
+                        <li>Seat covers and protective covers</li>
+                        <li>Full enclosures and curtains</li>
+                        <li>Shade and protection solutions</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Interior Refit & Repair</h3>
+                    <ul>
+                        <li>Full interior refresh projects</li>
+                        <li>Foam replacement and upgrades</li>
+                        <li>Panel and headliner updates</li>
+                        <li>Zippers, hardware and detail repairs</li>
+                        <li>Color matching and styling updates</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="materials-box">
+                <h3>Preferred materials for premium marine work</h3>
+                <p>We use marine-focused materials chosen for finish quality and durability in Florida conditions.</p>
+                <div class="materials-pills">
+                    <span>Marine Vinyl</span>
+                    <span>Sunbrella</span>
+                    <span>WeatherMax</span>
+                    <span>UV-Resistant Thread</span>
+                    <span>Stainless Hardware</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light" id="process">
+        <div class="container">
+            <div class="section-intro">
+                <span class="eyebrow">How to start</span>
+                <h2>Simple process. No wasted time.</h2>
+                <p>
+                    The fastest way to get a quote is to text photos on WhatsApp with your boat model, location and what you want done.
+                </p>
+            </div>
+
+            <div class="process-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Send photos</h3>
+                    <p>Clear pictures of the boat, seats, canvas or area that needs work.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Share your details</h3>
+                    <p>Boat model, location and your goal for the project.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get a quote</h3>
+                    <p>We review the scope, discuss options and give you a realistic next step.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Schedule the work</h3>
+                    <p>Once details are confirmed, we lock in the project and timeline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="portfolio">
+        <div class="container">
+            <div class="section-intro">
+                <span class="eyebrow">Portfolio</span>
+                <h2>Recent marine upholstery and canvas work</h2>
+                <p>
+                    A few examples of the type of fit, finish and clean detailing we aim for on every project.
+                </p>
+            </div>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="IMG_1651.jpeg" alt="Custom center console helm seating by Pelican Canvas" />
+                    <div class="gallery-caption"><strong>Center Console Seating</strong><span>Custom upholstery with a cleaner premium finish.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_1650.jpeg" alt="Luxury helm seat upholstery with diamond stitching" />
+                    <div class="gallery-caption"><strong>Helm Seats</strong><span>Premium detailing and upgraded look for the helm.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_1647.jpeg" alt="Cockpit seating and bimini top project" />
+                    <div class="gallery-caption"><strong>Cockpit Refit</strong><span>Upholstery and top work designed for real Florida use.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_1645.jpeg" alt="Captain chair marine upholstery project" />
+                    <div class="gallery-caption"><strong>Captain Chair</strong><span>Refined lines, better fit and strong visual impact.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_1644.jpeg" alt="Yacht salon seating interior project" />
+                    <div class="gallery-caption"><strong>Yacht Interior</strong><span>Comfort and aesthetics upgraded together.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_1643.jpeg" alt="Custom marine enclosure installation" />
+                    <div class="gallery-caption"><strong>Canvas Enclosure</strong><span>Protection, fit and clean finish.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_1642.jpeg" alt="Performance boat cover made by Pelican Canvas" />
+                    <div class="gallery-caption"><strong>Performance Cover</strong><span>Protection with a proper custom fit.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_1641.jpeg" alt="Center console marine seating upholstery" />
+                    <div class="gallery-caption"><strong>Custom Seating</strong><span>Built around the boat, not a generic template.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_1637.jpeg" alt="T-top shade and marine canvas work" />
+                    <div class="gallery-caption"><strong>T-Top Shade</strong><span>Useful shade with a clean, marine-ready look.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_1475.jpeg" alt="Full boat cover in South Florida marina" />
+                    <div class="gallery-caption"><strong>Full Boat Cover</strong><span>Protection from sun, salt and storage exposure.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_1474.jpeg" alt="Custom t-top cover project" />
+                    <div class="gallery-caption"><strong>T-Top Cover</strong><span>Tailored fit and durable finish.</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_8608.jpeg" alt="Premium marine cover by Pelican Canvas" />
+                    <div class="gallery-caption"><strong>Custom Cover</strong><span>South Florida-ready protection for everyday use.</span></div>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top: 34px;">
+                <a href="https://wa.me/13213109375?text=Hi%20Pelican%20Canvas!%20I%27d%20like%20to%20share%20photos%20of%20my%20boat%20for%20a%20quote." class="btn btn-outline-dark" target="_blank" rel="noopener">Send Photos for a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light" id="service-area">
+        <div class="container">
+            <div class="section-intro">
+                <span class="eyebrow">Service area</span>
+                <h2>Serving boat owners across South Florida</h2>
+                <p>
+                    Based in Dania Beach and working with clients across the South Florida marine community.
+                </p>
+            </div>
+
+            <div class="coverage-grid">
+                <div class="card">
+                    <h3 style="margin-bottom: 10px; font-size: 1.45rem;">Primary areas we serve</h3>
+                    <div class="coverage-list">
+                        <span>Miami</span>
+                        <span>Miami Beach</span>
+                        <span>Aventura</span>
+                        <span>Sunny Isles</span>
+                        <span>Hollywood</span>
+                        <span>Dania Beach</span>
+                        <span>Fort Lauderdale</span>
+                        <span>Pompano Beach</span>
+                        <span>Boca Raton</span>
+                        <span>West Palm Beach</span>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    <h3>Large project? Mobile service may be available.</h3>
+                    <p>For larger upholstery and canvas projects, send your location and photos so we can review the scope.</p>
+                    <p>Best first message:</p>
+                    <p><strong>Boat model + location + photos + what you want done.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-intro">
+                <span class="eyebrow">Client feedback</span>
+                <h2>What clients notice most</h2>
+                <p>
+                    Quality, fit and attention to detail are what owners tend to mention first.
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>“Exceptional craftsmanship on our 48' yacht interior. The attention to detail and quality of materials exceeded our expectations.”</p>
+                    <strong>Azimut owner · Fort Lauderdale</strong>
+                </div>
+                <div class="testimonial">
+                    <p>“Perfect fit and finish on our custom bimini and enclosure. Pelican Canvas delivered exactly what we needed for South Florida conditions.”</p>
+                    <strong>Center console owner · Miami Beach</strong>
+                </div>
+                <div class="testimonial">
+                    <p>“Professional service from start to finish. Our boat's interior looks brand new and the quality is outstanding.”</p>
+                    <strong>Sea Ray owner · Dania Beach</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light" id="faq">
+        <div class="container">
+            <div class="section-intro">
+                <span class="eyebrow">FAQ</span>
+                <h2>Questions owners usually ask first</h2>
+                <p>
+                    A few quick answers before you text us.
+                </p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I get a quote?</h3>
+                    <p>Send photos on WhatsApp with your boat model, location and what you want done. That is the fastest way to get started.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you work only by text?</h3>
+                    <p>Yes. Text and photos make marine upholstery projects much easier to review accurately at the start.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What kinds of boats do you work on?</h3>
+                    <p>Center consoles, cruisers and yachts. If you have a larger project, text photos and details.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What does pricing usually start at?</h3>
+                    <p>Smaller projects typically start around $700+. Full interior projects are usually higher depending on scope, materials and complexity.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer custom canvas work?</h3>
+                    <p>Yes. We handle covers, bimini tops, T-top canvas, enclosures and related custom work.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What area do you serve?</h3>
+                    <p>South Florida, including Miami, Fort Lauderdale, Dania Beach and West Palm Beach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container contact-wrap">
+            <span class="eyebrow">Get in touch</span>
+            <h2>Ready to upgrade your boat?</h2>
+            <p class="section-intro" style="margin-bottom: 0;">
+                Send photos and a few details on WhatsApp. We will review the project and point you to the right next step.
+            </p>
+
+            <div class="contact-highlight">
+                <h3>Start your quote by text</h3>
+                <p>
+                    Marine upholstery and canvas projects are easier to quote when we can see the boat, the condition and the scope.
+                    Photos help us move faster and cut down on back-and-forth.
+                </p>
+
+                <div class="btn-row" style="margin-bottom: 12px;">
+                    <a href="https://wa.me/13213109375?text=Hi%20Pelican%20Canvas!%20I%27d%20like%20a%20quote.%0ABoat%20model:%20____%0ALocation:%20____%0AWork%20needed:%20____%0AI%20can%20send%20photos." class="btn btn-primary" target="_blank" rel="noopener">Text on WhatsApp</a>
+                    <a href="mailto:contact@pelicancanvas.com" class="btn btn-secondary">Email Us</a>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <strong>WhatsApp</strong>
+                        <a href="https://wa.me/13213109375" target="_blank" rel="noopener">(321) 310-9375</a>
+                    </div>
+                    <div class="contact-card">
                         <strong>Email</strong>
                         <a href="mailto:contact@pelicancanvas.com">contact@pelicancanvas.com</a>
                     </div>
-
-                    <div class="contact-item">
-                        <strong>Location</strong>
-                        Dania Beach, Florida<br>
-                        <span style="color: var(--gold); font-weight: bold;">Serving Miami • Fort Lauderdale • West Palm Beach</span>
+                    <div class="contact-card">
+                        <strong>Based in</strong>
+                        Dania Beach, Florida
                     </div>
-
-                    <div class="contact-item">
-                        <strong>Service Area</strong>
-                        South Florida marine community<br>
-                        Mobile service available for larger projects
-                    </div>
-                </div>
-
-                <div style="margin-top: 40px;">
-                    <a href="https://wa.me/13213109375?text=Hi%20Pelican%20Canvas!%20I'd%20like%20a%20quote.%0ABoat%20model:%20____%0ALocation:%20____%0AI%20can%20send%20photos." class="btn btn-primary" target="_blank" style="font-size: 1.2em; padding: 18px 45px;">
-                        Start Your Project Today
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p style="font-size: 1.2em; margin-bottom: 15px;"><strong>PELICAN CANVAS</strong></p>
-            <p>Premium Marine Upholstery & Canvas</p>
+        <div class="container footer-inner">
+            <p style="font-size: 1.2rem; color: var(--gold);"><strong>PELICAN CANVAS</strong></p>
+            <p>Premium Marine Upholstery & Custom Boat Canvas</p>
             <p>Dania Beach, Florida</p>
-            <div class="service-area">
-                <p><strong>Proudly Serving South Florida</strong></p>
-                <p>Miami | Fort Lauder
+            <p class="footer-note">Serving Miami • Fort Lauderdale • West Palm Beach • South Florida</p>
+        </div>
+    </footer>
+</body>
+</html>
