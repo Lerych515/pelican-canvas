@@ -467,3 +467,34 @@ h3 {
     width: 100%;
   }
 }
+
+.skip-link { position: absolute; left: 16px; top: -80px; z-index: 10; padding: 12px 18px; background: var(--cream); color: var(--navy); }
+.skip-link:focus { top: 12px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #84630b; outline-offset: 4px; }
+.site-header a:focus-visible, .home-header a:focus-visible, .site-footer a:focus-visible { outline-color: var(--gold); }
+.review { margin: 0; }
+.review blockquote { color: var(--navy); font-size: 1.04rem; line-height: 1.55; }
+.review figcaption { color: #40516a; font-size: .85rem; margin-top: 14px; }
+.review-source { margin-top: 22px; text-align: center; }
+.review-source a { color: #745705; font-weight: 700; }
+.button-outline { border-color: var(--navy); color: var(--navy); background: transparent; }
+button.button { font: inherit; font-weight: 700; cursor: pointer; }
+.contact-options { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.request-form { max-width: 860px; margin: 0 auto; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.form-grid label { display: block; font-weight: 700; color: var(--navy); }
+.form-grid input, .form-grid select, .form-grid textarea { display: block; width: 100%; min-height: 48px; border: 1px solid #7a8697; border-radius: 8px; background: white; color: var(--navy); padding: 12px; margin-top: 8px; font: inherit; font-weight: 400; }
+.form-grid textarea { resize: vertical; }
+.form-wide { grid-column: 1 / -1; }
+.form-note { margin-top: 18px; color: #40516a; font-size: .92rem; }
+.mobile-contact { display: none; }
+.site-footer p + p { margin-top: 12px; }
+.site-footer p a { color: var(--gold); }
+@media (max-width: 640px) {
+  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+  .form-grid { grid-template-columns: 1fr; }
+  .contact-options .button { width: 100%; }
+  .mobile-contact { display: grid; grid-template-columns: 1fr 1fr 1.5fr; position: fixed; bottom: 0; left: 0; width: 100%; padding: 8px 10px calc(8px + env(safe-area-inset-bottom)); gap: 8px; z-index: 20; background: var(--navy); box-shadow: 0 -3px 18px rgba(0,0,0,.18); }
+  .mobile-contact a { display: flex; align-items: center; justify-content: center; min-height: 48px; border: 1px solid var(--gold); border-radius: 8px; color: var(--cream); text-decoration: none; font-weight: 700; font-size: .82rem; }
+  .mobile-contact a:last-child { color: var(--navy); background: var(--gold); }
+}

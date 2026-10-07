@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics: contact clicks indicate intent, not completed enquiries. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6B7YYZK1E"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,6 +9,7 @@
     gtag('js', new Date());
     gtag('config', 'G-T6B7YYZK1E');
   </script>
+  <script src="/site-contact.js?v=20261007" defer></script>
   <script>
     document.addEventListener('click', function (event) {
       const link = event.target.closest('a');
@@ -31,7 +32,7 @@
   <meta name="description" content="Full seating restoration on a 2015 Cobia 296 by Pelican Canvas. View bow cushions, helm chairs, console seating and the folding transom bench.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/">
-  <link rel="stylesheet" href="/site-pages.css">
+  <link rel="stylesheet" href="/site-pages.css?v=20261007">
   <link rel="stylesheet" href="/projects/cobia-296-upholstery-restoration/project.css?v=20260913">
   <script src="/projects/cobia-296-upholstery-restoration/gallery.js?v=20260913" defer></script>
   <link rel="icon" type="image/png" href="/IMG_9007.png">
@@ -41,9 +42,7 @@
   <meta property="og:url" content="https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/">
   <meta property="og:image" content="https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/cobia-296-bow.jpg?v=20260913">
   <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"2015 Cobia 296 Full Upholstery Restoration","description":"Full seating restoration on a 2015 Cobia 296 by Pelican Canvas. View bow cushions, helm chairs, console seating and the folding transom bench.","mainEntityOfPage":"https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/","image":["https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/cobia-296-bow.jpg?v=20260913","https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/cobia-296-helm.jpg?v=20260913","https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/cobia-296-console.jpg?v=20260913","https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/cobia-296-transom.jpg?v=20260913"],"author":{"@type":"Organization","name":"Pelican Canvas","url":"https://pelican-canvas.com/"},"publisher":{"@type":"Organization","name":"Pelican Canvas","url":"https://pelican-canvas.com/","logo":{"@type":"ImageObject","url":"https://pelican-canvas.com/IMG_9007.png"}},"about":["2015 Cobia 296","Marine upholstery","Boat seat reupholstery","Full interior restoration"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pelican-canvas.com/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://pelican-canvas.com/projects/"},{"@type":"ListItem","position":3,"name":"2015 Cobia 296 Full Upholstery Restoration","item":"https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/"}]}]}
-  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "2015 Cobia 296 Full Upholstery Restoration", "description": "Full seating restoration on a 2015 Cobia 296 by Pelican Canvas. View bow cushions, helm chairs, console seating and the folding transom bench.", "mainEntityOfPage": "https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/", "image": ["https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/cobia-296-bow.jpg?v=20260913", "https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/cobia-296-helm.jpg?v=20260913", "https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/cobia-296-console.jpg?v=20260913", "https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/cobia-296-transom.jpg?v=20260913"], "author": {"@type": "Organization", "name": "Pelican Canvas", "url": "https://pelican-canvas.com/", "logo": {"@type": "ImageObject", "url": "https://pelican-canvas.com/IMG_9007.png"}}, "publisher": {"@type": "Organization", "name": "Pelican Canvas", "url": "https://pelican-canvas.com/", "logo": {"@type": "ImageObject", "url": "https://pelican-canvas.com/IMG_9007.png"}}, "about": ["2015 Cobia 296", "Marine upholstery", "Boat seat reupholstery", "Full interior restoration"], "datePublished": "2026-09-13", "dateModified": "2026-10-07"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pelican-canvas.com/"}, {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://pelican-canvas.com/projects/"}, {"@type": "ListItem", "position": 3, "name": "2015 Cobia 296 Full Upholstery Restoration", "item": "https://pelican-canvas.com/projects/cobia-296-upholstery-restoration/"}]}]}</script>
   <meta property="og:image:width" content="941">
   <meta property="og:image:height" content="1672">
   <meta property="og:image:type" content="image/jpeg">
@@ -52,16 +51,7 @@
 <body class="cobia-page">
   <header class="site-header">
     <div class="container">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="nav-brand" href="/"><img src="/IMG_9007.png" alt="" width="42" height="42"><span>PELICAN CANVAS</span></a>
-        <div class="nav-links">
-          <a href="/marine-upholstery/">Marine Upholstery</a>
-          <a href="/custom-boat-covers/">Boat Covers</a>
-          <a href="/projects/" aria-current="page">Projects</a>
-          <a href="/#about">About</a>
-          <a href="/#contact">Contact</a>
-        </div>
-      </nav>
+      <nav class="site-nav" aria-label="Primary navigation"><a class="nav-brand" href="/"><img src="/IMG_9007.png" alt="" width="1000" height="1000"><span>PELICAN CANVAS</span></a><div class="nav-links"><a href="/marine-upholstery/">Marine Upholstery</a><a href="/custom-boat-covers/">Boat Covers</a><a href="/boat-shades/">Boat Shades</a><a href="/yacht-interiors/">Yacht Interiors</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></div></nav>
       <div class="page-hero">
         <div class="breadcrumbs"><a href="/">Home</a> / <a href="/projects/">Projects</a> / Cobia 296</div>
         <span class="eyebrow">Full upholstery restoration · 2015 Cobia 296</span>
@@ -78,7 +68,7 @@
           <a class="project-photo" href="/projects/cobia-296-upholstery-restoration/cobia-296-bow.jpg?v=20260913" data-gallery aria-label="Enlarge photo: Restored bow seating and wraparound bolsters on a 2015 Cobia 296">
               <picture>
                 <source type="image/webp" srcset="/projects/cobia-296-upholstery-restoration/cobia-296-bow.webp?v=20260913">
-                <img src="/projects/cobia-296-upholstery-restoration/cobia-296-bow.jpg?v=20260913" alt="Restored bow seating and wraparound bolsters on a 2015 Cobia 296" width="941" height="1672" loading="eager" decoding="async" fetchpriority="high">
+                <img src="/projects/cobia-296-upholstery-restoration/cobia-296-bow.jpg?v=20260913" alt="Restored bow seating and wraparound bolsters on a 2015 Cobia 296" loading="eager" decoding="async" fetchpriority="high" width="941" height="1672">
               </picture>
               <span class="photo-enlarge" aria-hidden="true">View full photo ↗</span>
             </a>
@@ -110,7 +100,7 @@
             <a class="project-photo" href="/projects/cobia-296-upholstery-restoration/cobia-296-helm.jpg?v=20260913" data-gallery aria-label="Enlarge photo: Twin Cobia 296 helm chairs with cream and taupe upholstery and raised seat bolsters">
               <picture>
                 <source type="image/webp" srcset="/projects/cobia-296-upholstery-restoration/cobia-296-helm.webp?v=20260913">
-                <img src="/projects/cobia-296-upholstery-restoration/cobia-296-helm.jpg?v=20260913" alt="Twin Cobia 296 helm chairs with cream and taupe upholstery and raised seat bolsters" width="941" height="1672" loading="lazy" decoding="async">
+                <img src="/projects/cobia-296-upholstery-restoration/cobia-296-helm.jpg?v=20260913" alt="Twin Cobia 296 helm chairs with cream and taupe upholstery and raised seat bolsters" loading="lazy" decoding="async" width="941" height="1672">
               </picture>
               <span class="photo-enlarge" aria-hidden="true">View full photo ↗</span>
             </a>
@@ -120,7 +110,7 @@
             <a class="project-photo" href="/projects/cobia-296-upholstery-restoration/cobia-296-console.jpg?v=20260913" data-gallery aria-label="Enlarge photo: Restored two-person forward console seat on a 2015 Cobia 296">
               <picture>
                 <source type="image/webp" srcset="/projects/cobia-296-upholstery-restoration/cobia-296-console.webp?v=20260913">
-                <img src="/projects/cobia-296-upholstery-restoration/cobia-296-console.jpg?v=20260913" alt="Restored two-person forward console seat on a 2015 Cobia 296" width="941" height="1672" loading="lazy" decoding="async">
+                <img src="/projects/cobia-296-upholstery-restoration/cobia-296-console.jpg?v=20260913" alt="Restored two-person forward console seat on a 2015 Cobia 296" loading="lazy" decoding="async" width="941" height="1672">
               </picture>
               <span class="photo-enlarge" aria-hidden="true">View full photo ↗</span>
             </a>
@@ -130,7 +120,7 @@
             <a class="project-photo" href="/projects/cobia-296-upholstery-restoration/cobia-296-transom.jpg?v=20260913" data-gallery aria-label="Enlarge photo: Cobia 296 folding transom bench with restored two-tone cushion and matching backrest">
               <picture>
                 <source type="image/webp" srcset="/projects/cobia-296-upholstery-restoration/cobia-296-transom.webp?v=20260913">
-                <img src="/projects/cobia-296-upholstery-restoration/cobia-296-transom.jpg?v=20260913" alt="Cobia 296 folding transom bench with restored two-tone cushion and matching backrest" width="941" height="1672" loading="lazy" decoding="async">
+                <img src="/projects/cobia-296-upholstery-restoration/cobia-296-transom.jpg?v=20260913" alt="Cobia 296 folding transom bench with restored two-tone cushion and matching backrest" loading="lazy" decoding="async" width="941" height="1672">
               </picture>
               <span class="photo-enlarge" aria-hidden="true">View full photo ↗</span>
             </a>
@@ -167,7 +157,7 @@
           <h2 id="quote-title">Ready to restore your boat seating?</h2>
           <p>Send your boat model, year, location and a few photos. Pelican Canvas provides custom marine upholstery in Hollywood, Fort Lauderdale, Miami and across South Florida.</p>
           <div class="button-row">
-            <a class="button button-primary" href="https://wa.me/13213109375?text=Hi%20Pelican%20Canvas!%20I%20saw%20your%20Cobia%20296%20restoration%20and%20would%20like%20a%20quote.%0ABoat%20make/model/year:%20____%0ALocation:%20____%0AWork%20needed:%20____%0AI%20can%20send%20photos." target="_blank" rel="noopener">Request a Custom Quote</a>
+            <a class="button button-primary" href="/contact/">Request an Estimate</a>
             <a class="button button-secondary" href="/projects/">Explore More Projects</a>
           </div>
         </div>
@@ -182,12 +172,7 @@
     <button class="lightbox-next" type="button" aria-label="Next photo">→</button>
   </dialog>
 
-  <footer class="site-footer">
-    <p style="font-size:1.2rem; font-weight:700;">PELICAN CANVAS</p>
-    <p>Custom Marine Upholstery, Covers &amp; Interiors</p>
-    <div class="footer-links"><a href="/">Home</a><a href="/marine-upholstery/">Marine Upholstery</a><a href="/custom-boat-covers/">Boat Covers</a><a href="/projects/">Projects</a><a href="/#contact">Contact</a></div>
-    <p>Based in Hollywood, Florida · <a href="https://www.instagram.com/pelican.canvas/" target="_blank" rel="noopener" style="color:var(--gold);">@pelican.canvas</a></p>
-    <div class="service-line">Serving South Florida — Miami • Fort Lauderdale • Hollywood • Aventura • Boca Raton • West Palm Beach</div>
-  </footer>
+  <footer class="site-footer"><p style="font-size:1.2rem;font-weight:700;">PELICAN CANVAS</p><p>Custom Marine Upholstery, Covers, Shades &amp; Yacht Interiors</p><div class="footer-links"><a href="/">Home</a><a href="/marine-upholstery/">Marine Upholstery</a><a href="/custom-boat-covers/">Boat Covers</a><a href="/boat-shades/">Boat Shades</a><a href="/yacht-interiors/">Yacht Interiors</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></div><p>Hollywood, Florida · By appointment</p><p><a href="tel:+13213109375">(321) 310-9375</a> · <a href="sms:+13213109375">Text us</a> · <a href="mailto:contact@pelican-canvas.com">contact@pelican-canvas.com</a></p><p><a href="https://www.instagram.com/pelican.canvas/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/channel/UCkVa46DMnXWuH2gKthd9YZg" target="_blank" rel="noopener">YouTube</a></p><div class="service-line">Serving South Florida — Miami • Fort Lauderdale • Hollywood • Aventura • Boca Raton • West Palm Beach</div></footer>
+<nav class="mobile-contact" aria-label="Quick contact"><a href="tel:+13213109375">Call</a><a href="sms:+13213109375">Text Photos</a><a href="/contact/">Request Estimate</a></nav>
 </body>
 </html>
