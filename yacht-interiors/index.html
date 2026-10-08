@@ -10,20 +10,6 @@
     gtag('config', 'G-T6B7YYZK1E');
   </script>
   <script src="/site-contact.js?v=20261007" defer></script>
-  <script>
-    document.addEventListener('click', function (event) {
-      const link = event.target.closest('a');
-      if (!link || typeof gtag !== 'function') return;
-      const href = link.getAttribute('href') || '';
-      if (href.startsWith('tel:')) {
-        gtag('event', 'lead_phone_click', { link_url: href });
-      } else if (href.startsWith('mailto:')) {
-        gtag('event', 'lead_email_click', { link_url: href });
-      } else if (/wa\.me|whatsapp\.com/i.test(href)) {
-        gtag('event', 'lead_whatsapp_click', { link_url: href });
-      }
-    });
-  </script>
 
 
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
