@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pelican Website Analytics | Pelican Canvas</title>
-<meta name="description" content="About Pelican Website Analytics, an internal tool that imports Pelican Canvas website reports from Google Analytics and Search Console into a private Google Sheet.">
+<meta name="description" content="About Pelican Website Analytics, an internal tool that imports Pelican Canvas website and Business Profile reports from Google's APIs into a private Google Sheet.">
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="https://pelican-canvas.com/website-analytics/">
 <link rel="stylesheet" href="/site-pages.css?v=20261007">
@@ -20,20 +20,22 @@ body{padding-bottom:0}.page-hero{padding:50px 0 56px}.page-hero h1{font-size:cla
 <a class="nav-brand" href="/"><span>PELICAN CANVAS</span></a>
 <div class="nav-links"><a href="/website-analytics/">Website Analytics</a><a href="/website-analytics/privacy/">Privacy Policy</a></div>
 </nav>
-<div class="page-hero"><span class="eyebrow">Internal business tool</span><h1>Pelican Website Analytics</h1><p>Website performance reporting for Pelican Canvas.</p></div>
+<div class="page-hero"><span class="eyebrow">Internal business tool</span><h1>Pelican Website Analytics</h1><p>Website and Business Profile performance reporting for Pelican Canvas.</p></div>
 </div></header>
 <main id="main-content" class="document">
 <section aria-labelledby="purpose"><h2 id="purpose">What this application does</h2>
 <p>Pelican Website Analytics is an internal reporting tool operated by Pelican Canvas. It imports reports for pelican-canvas.com from Google Analytics 4 and Google Search Console into a designated, access-controlled Google spreadsheet.</p>
+<p>A separate collector, Pelican Google Business Direct, reads performance reports for Pelican Canvas's Google Business Profile using Google's Business Information and Business Profile Performance APIs. Both collectors use this Google Cloud application's authorization configuration and designated reporting spreadsheet.</p>
 <p>Pelican Canvas uses these reports to understand website traffic, search visibility, useful pages and visitor actions, and to plan improvements to its website and content.</p>
 <div class="notice">This public page describes the application. Reports are available to the business owner and people the owner authorizes through Google account and spreadsheet sharing settings.</div></section>
 <section aria-labelledby="data"><h2 id="data">Google data used</h2>
 <ul><li><strong>Google Analytics 4:</strong> daily users, sessions, engagement, page views, traffic sources, landing pages, event counts, key events and reported revenue.</li>
-<li><strong>Google Search Console:</strong> site property information, search queries, page URLs, clicks, impressions, click-through rate and average position.</li></ul>
-<p>The application reads these reports to prepare historical and daily business summaries. It does not change the source Analytics or Search Console properties.</p></section>
+<li><strong>Google Search Console:</strong> site property information, search queries, page URLs, clicks, impressions, click-through rate and average position.</li>
+<li><strong>Google Business Profile:</strong> profile name, title and website for identity checks; daily Search and Maps impressions by device, call-button clicks, website clicks, direction requests, and monthly search keywords with exact or thresholded impression values.</li></ul>
+<p>The collectors read these reports to prepare historical and daily business summaries. It does not change the source Analytics, Search Console or Business Profile settings.</p></section>
 <section aria-labelledby="access"><h2 id="access">Access and operation</h2>
 <p>The owner authorizes the application through Google. The collector runs in Google Apps Script, writes reports and sync status to the configured Google Sheet, and uses a daily scheduled trigger.</p>
-<p>Google permissions cover reading Analytics and Search Console data, reading and writing spreadsheets, connecting to Google's reporting APIs, and managing the script's scheduled execution. The spreadsheet permission is broader than one file; the collector is configured to write to the designated reporting spreadsheet.</p>
+<p>Google permissions cover reading Analytics and Search Console data, reading and writing spreadsheets, connecting to Google's reporting APIs, and managing the script's scheduled execution. Google's Business Profile <code>business.manage</code> permission also allows management operations. The separate Business Profile collector uses read-only GET requests and does not change the profile, publish posts or reply to reviews. The spreadsheet permission is broader than one file; the collector is configured to write to the designated reporting spreadsheet.</p>
 <p>There is no public account registration on this page. This application is intended for Pelican Canvas's own reporting.</p></section>
 <section aria-labelledby="privacy"><h2 id="privacy">Privacy and support</h2>
 <p>Read the <a href="/website-analytics/privacy/">Pelican Website Analytics Privacy Policy</a> for details about data use, storage, sharing, retention and revoking access.</p>

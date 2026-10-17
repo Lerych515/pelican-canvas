@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Website Analytics Privacy Policy | Pelican Canvas</title>
-<meta name="description" content="How Pelican Website Analytics accesses, uses, stores and shares Google Analytics and Search Console report data.">
+<meta name="description" content="How Pelican Website Analytics accesses, uses, stores and shares Google Analytics, Search Console and Business Profile report data.">
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="https://pelican-canvas.com/website-analytics/privacy/">
 <link rel="stylesheet" href="/site-pages.css?v=20261007">
@@ -25,19 +25,20 @@ body{padding-bottom:0}.page-hero{padding:50px 0 56px}.page-hero h1{font-size:cla
 <main id="main-content" class="document">
 <p class="updated">Effective date: October 17, 2026</p>
 <section aria-labelledby="scope"><h2 id="scope">1. Operator and scope</h2>
-<p>Pelican Canvas operates <a href="/website-analytics/">Pelican Website Analytics</a> to collect and analyze reports for its own website, pelican-canvas.com. This policy applies to that internal reporting application and the Google data it handles.</p>
+<p>Pelican Canvas operates <a href="/website-analytics/">Pelican Website Analytics</a> to collect and analyze reports for its own website, pelican-canvas.com. This policy also covers the separate Pelican Google Business Direct collector, which reads Pelican Canvas's Business Profile performance reports using the same Google Cloud authorization application.</p>
 <p>Contact: <a href="mailto:contact@pelican-canvas.com">contact@pelican-canvas.com</a>.</p></section>
 <section aria-labelledby="collected"><h2 id="collected">2. Data accessed and collected</h2>
 <p>After the owner grants Google authorization, the application reads:</p>
 <ul><li><strong>Google Analytics 4 reports:</strong> dates, user and session counts, engagement, page views, source/medium, landing page paths and query strings, event names and counts, key events, and reported revenue.</li>
 <li><strong>Google Search Console reports:</strong> accessible site properties and permission levels; dates, search query text, page URLs, clicks, impressions, click-through rate and average position.</li>
+<li><strong>Google Business Profile reports:</strong> profile name, title and website for identity verification; dates, daily impressions in Google Search and Maps by desktop/mobile device, call-button clicks, website clicks, direction requests, and monthly search keywords with exact impression values or upper-bound thresholds. A call-button click is not a completed call.</li>
 <li><strong>Operational records:</strong> sync timestamps, requested date ranges, source status, row counts and error messages. Error details can contain website or project identifiers.</li></ul>
 <p>These are reporting data returned by Google. Query text and page URLs can contain information entered into searches or URLs, so access to exported reports should be limited appropriately.</p></section>
 <section aria-labelledby="use"><h2 id="use">3. Purpose and permissions</h2>
-<p>Data is used to maintain website performance history, assess traffic and search visibility, troubleshoot imports, and support Pelican Canvas's business reporting and website improvements.</p>
-<p>The Google consent screen requests read-only Analytics and Search Console access, spreadsheet read/write access, external API requests, and management of Apps Script triggers. Spreadsheet authorization can cover the owner's spreadsheets; the collector's configured output is one designated reporting spreadsheet. Source Analytics and Search Console settings are not modified.</p></section>
+<p>Data is used to maintain website performance history, assess website traffic, local Search and Maps visibility and profile interactions, troubleshoot imports, and support Pelican Canvas's business reporting and website improvements.</p>
+<p>The Google consent screen requests read-only Analytics and Search Console access, spreadsheet read/write access, external API requests, and management of Apps Script triggers. Spreadsheet authorization can cover the owner's spreadsheets; the collector's configured output is one designated reporting spreadsheet. The Business Profile collector separately requests Google's <code>business.manage</code> scope. Although this scope permits profile management, this collector only makes read-only GET requests to Google's Business Information and Business Profile Performance APIs. It does not modify source settings, publish posts, reply to reviews or collect customer reviews.</p></section>
 <section aria-labelledby="storage"><h2 id="storage">4. Storage and protection</h2>
-<p>The collector runs in Google Apps Script. Report rows and sync logs are stored in a Google Sheet; import status and configuration are stored in Apps Script. Execution diagnostics may also appear in Google-managed Apps Script or Cloud logs.</p>
+<p>The collectors run in Google Apps Script. Report rows and sync logs are stored in a Google Sheet; import status and configuration are stored in Apps Script. Execution diagnostics may also appear in Google-managed Apps Script or Cloud logs.</p>
 <p>Google handles account sign-in and authorization. The collector uses Google-managed authorization and a temporary access token for API requests. It does not write access tokens to report cells or application source files.</p>
 <p>Access to the script and spreadsheet is controlled through Google permissions. The owner is responsible for granting access only to authorized people and protecting the Google accounts used.</p></section>
 <section aria-labelledby="sharing"><h2 id="sharing">5. Sharing and Limited Use</h2>
@@ -47,7 +48,7 @@ body{padding-bottom:0}.page-hero{padding:50px 0 56px}.page-hero h1{font-size:cla
 <section aria-labelledby="retention"><h2 id="retention">6. Retention and deletion</h2>
 <p>Imported history and spreadsheet sync logs remain until the owner deletes them; the collector has no automatic expiry for those rows. Google-managed diagnostic logs follow the retention settings of the relevant Google service.</p>
 <p>The owner can stop collection by removing the script's scheduled trigger or revoking the application's access in <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revoking access stops future authorized requests but does not erase previously exported reports.</p>
-<p>To remove stored application reports, delete the dedicated Website report tabs, related Website settings and script properties, and relevant logs where Google provides deletion controls. Contact <a href="mailto:contact@pelican-canvas.com">contact@pelican-canvas.com</a> for access or deletion requests. Other existing business records in the reporting spreadsheet are outside this application's report tabs.</p></section>
+<p>To remove stored application reports, delete the dedicated Website and GBP Direct report tabs, related collector settings and script properties, and relevant logs where Google provides deletion controls. Contact <a href="mailto:contact@pelican-canvas.com">contact@pelican-canvas.com</a> for access or deletion requests. Other existing business records in the reporting spreadsheet are outside this application's report tabs.</p></section>
 <section aria-labelledby="changes"><h2 id="changes">7. Changes to this policy</h2>
 <p>Updates will be published on this page with a revised effective date when the application's data practices change.</p></section>
 </main>
